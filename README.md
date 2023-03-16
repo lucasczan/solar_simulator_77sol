@@ -44,6 +44,8 @@ npm run test
 <ul>
   <li>NextJS 13</li>
   <li>Styled Components</li>
+  <li>Formik</li>
+  <li>Yup</li>
   <li>Axios</li>
   <li>Jest</li>
   <li>React-testing-library</li>
