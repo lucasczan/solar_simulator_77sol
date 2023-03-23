@@ -2,7 +2,7 @@ import { roofEnum } from '@/enums/roofEnum';
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3333',
+  baseURL: 'https://api2.77sol.com.br/',
   headers: {
     'Content-Type': 'application/json'
   }
