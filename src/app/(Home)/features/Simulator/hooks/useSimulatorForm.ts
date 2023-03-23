@@ -1,6 +1,5 @@
 import { roofEnum } from '@/enums/roofEnum';
 import { useSimulator } from '@/hooks/useSimulator';
-import { getSimulation } from '@/services/api';
 import { useFormik } from 'formik';
 import { useState } from 'react';
 import { simulationValidatorSchema } from '../validators/simulationValidator';
@@ -21,7 +20,7 @@ export const useSimulatorForm = () => {
     onSubmit: async (values) => {
       try {
         setSimulationIsLoading(true);
-        const simulationResult = await handleSimulate({
+        await handleSimulate({
           cep: values.zipCode,
           estrutura: values.roofType as roofEnum,
           valor_conta: Number(values.price)

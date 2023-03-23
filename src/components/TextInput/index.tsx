@@ -29,6 +29,7 @@ const TextInput: React.FC<TextInputProps> = ({
     if (!onChange) return;
     onChange(text);
   };
+
   const Input = mask ? (
     <InputMask
       id={id}
