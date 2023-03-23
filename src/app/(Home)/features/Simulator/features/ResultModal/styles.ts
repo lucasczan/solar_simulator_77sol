@@ -28,6 +28,23 @@ export const Content = styled.div`
   & .value {
     color: ${({ theme }) => theme.colors.main};
   }
+
+  & .kitContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 300px;
+    overflow: auto;
+    place-items: center;
+    padding: 20px;
+    @media screen and (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 `;
 
 export const Tag = styled.div`

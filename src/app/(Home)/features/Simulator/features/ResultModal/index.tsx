@@ -3,6 +3,7 @@ import { Modal } from '@/components/Modal';
 import { SimulationDTO } from '@/dtos/SimulationDTO';
 import { formatoToPrice } from '@/utils/formatToPrice';
 import React from 'react';
+import KitItem from '../KitItem';
 
 import * as S from './styles';
 
@@ -35,6 +36,11 @@ const ResultModal: React.FC<ResultModalProps> = ({
             {formatoToPrice(simulationResultData.valor_instalacao)}
           </span>
         </span>
+        <div className="kitContainer">
+          {simulationResultData.kit.map((item) => (
+            <KitItem key={item.id} item={item} />
+          ))}
+        </div>
         <div className="buttonsContainer">
           <Button onClick={close}>OK</Button>
         </div>
