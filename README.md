@@ -10,13 +10,6 @@ Primeiramente instalar as dependencias:
 npm install
 ```
 
-após instalar as dependencias você deve rodar o servidor json-server através do comando:
-
-```bash
-npm run server
-
-```
-
 Em seguida rode a aplicação com:
 
 ```bash
@@ -53,6 +46,3 @@ npm run test
   <li>JSON Server</li>
 </ul>
 
-
-### Observações finais:
-Como o endpoint fornecido no desafio está protegido com CORS e a origin segue restrita para o consumo da API pela aplicação do dominio 77Sol, foram utilizadas a API do <a href="https://viacep.com.br/">viaCep</a> para consultar o cep e o <a href="https://www.npmjs.com/package/json-server">json server</a> para simular o funcionamento da API.
