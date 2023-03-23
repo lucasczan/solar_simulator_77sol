@@ -42,4 +42,18 @@ describe('TextInput test', () => {
     );
     expect(getByTestId('error-icon')).toBeDefined();
   });
+
+  it('should format input according to the mask', () => {
+    const { getByLabelText } = render(
+      <ThemeProvider theme={theme}>
+        <TextInput id="tel" mask="(99) 9999-9999" label="Telefone" />
+      </ThemeProvider>
+    );
+
+    const input = getByLabelText('Telefone') as HTMLInputElement;
+
+    fireEvent.change(input, { target: { value: '11987654321' } });
+
+    expect(input.value).toBe('(11) 9876-5432');
+  });
 });
